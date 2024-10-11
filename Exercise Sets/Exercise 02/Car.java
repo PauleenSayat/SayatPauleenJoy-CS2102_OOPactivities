@@ -22,7 +22,6 @@ public class Car {
         return size;
     }
 
-    // Setter methods
     public void setColor(String color) {
         this.color = color;
     }
