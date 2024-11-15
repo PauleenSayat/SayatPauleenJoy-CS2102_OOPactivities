@@ -1,5 +1,3 @@
-package car;
-
 public class Car {
     private String color;
     private double price;
