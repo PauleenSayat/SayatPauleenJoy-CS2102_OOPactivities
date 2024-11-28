@@ -1,25 +1,23 @@
-package labact3;
-
 public class Writer extends Artist {
-	public enum WritingStyle {
-		FICTION, NONFICTION, POETRY, DRAMA
-		}
-	
-	private WritingStyle writingStyle;
+    private String writingStyle;
 
-	public Writer(String name, int experience, WritingStyle writingStyle) {
-		super(name, experience);
-		this.writingStyle = writingStyle;
-		}
+    public Writer(String name, int age, String specialty, String writingStyle) {
+        super(name, age, specialty);
+        this.writingStyle = writingStyle;
+    }
 
-	public WritingStyle getWritingStyle() {
-		return writingStyle;
-		}
+    public String getWritingStyle() {
+        return writingStyle;
+    }
 
+    @Override
+    public void displayDetails() {
+        System.out.println("Instance of Writer class");
+        System.out.println("\nWriter's Info:");
+        System.out.println("Artist Name: " + getName());
+        System.out.println("Age: " + getAge());
+        System.out.println("Specialty: " + getSpecialty());
+        System.out.println("Writing Style: " + writingStyle);
+    }
+}
 
-	public void displayDetails() {
-		System.out.println("✍🏻 Writer: " + getName());
-		System.out.println("Experience: " + getExperience() + " years");
-		System.out.println("Writing Style: " + writingStyle);
-		}
-	}
