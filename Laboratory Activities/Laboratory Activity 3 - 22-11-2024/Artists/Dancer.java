@@ -1,25 +1,22 @@
-package labact3;
-
 public class Dancer extends Artist {
-	public enum DanceStyle {
-		BALLET, HIPHOP, JAZZ, CONTEMPORARY
-		}
+    private String danceStyle;
 
-	private DanceStyle danceStyle;
+    public Dancer(String name, int age, String specialty, String danceStyle) {
+        super(name, age, specialty);
+        this.danceStyle = danceStyle;
+    }
 
-	public Dancer(String name, int experience, DanceStyle danceStyle) {
-		super(name, experience);
-		this.danceStyle = danceStyle;
-		}
+    public String getDanceStyle() {
+        return danceStyle;
+    }
 
-	public DanceStyle getDanceStyle() {
-		return danceStyle;
-		}
-
-
-	public void displayDetails() {
-		System.out.println("💃🏻 Dancer: " + getName());
-		System.out.println("Experience: " + getExperience() + " years");
-		System.out.println("Dance Style: " + danceStyle);
-		}
-	}
+    @Override
+    public void displayDetails() {
+        System.out.println("Instance of Dancer class");
+        System.out.println("\nDancer's Info:");
+        System.out.println("Artist Name: " + getName());
+        System.out.println("Age: " + getAge());
+        System.out.println("Specialty: " + getSpecialty());
+        System.out.println("Dance Style: " + danceStyle);
+    }
+}
