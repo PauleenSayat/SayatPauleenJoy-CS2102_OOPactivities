@@ -1,18 +1,22 @@
-package labact3;
-
 public class ArtistDemo {
-	public static void main(String[] args) {
-		Singer singer = new Singer("Adele", 15, Singer.Genre.POP);
-		Painter painter = new Painter("Van Gogh", 10, Painter.Medium.OIL);
-		Writer writer = new Writer("Shakespeare", 20, Writer.WritingStyle.DRAMA);
-		Dancer dancer = new Dancer("Misty Copeland", 12, Dancer.DanceStyle.BALLET);
+    public static void main(String[] args) {
+        Artist artist = new Artist("Jieun Lee", 31, "Music");
+        artist.displayDetails();
+        System.out.println();
 
-		singer.displayDetails();
-		System.out.println();
-		painter.displayDetails();
-		System.out.println();
-		writer.displayDetails();
-		System.out.println();
-		dancer.displayDetails();
- }
+        Singer singer = new Singer("Tzuyu Chou", 25, "Music", "POP");
+        singer.displayDetails();
+        System.out.println();
+
+        Dancer dancer = new Dancer("Misty Copeland", 31, "Dance", "BALLET");
+        dancer.displayDetails();
+        System.out.println();
+
+        Painter painter = new Painter("Pablo Picasso", 91, "Visual Arts", "OIL");
+        painter.displayDetails();
+        System.out.println();
+
+        Writer writer = new Writer("William Shakespeare", 52, "Literature", "DRAMA");
+        writer.displayDetails();
+    }
 }
