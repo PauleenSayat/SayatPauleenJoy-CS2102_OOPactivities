@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class Main {
+public class Escseq {
     
     public static void main(String[] args){
         int value = 7;
