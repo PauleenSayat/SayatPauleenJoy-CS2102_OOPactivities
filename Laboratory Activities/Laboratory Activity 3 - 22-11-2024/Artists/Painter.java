@@ -1,24 +1,23 @@
-package labact3;
+public class Painter extends Artist {
+    private String medium;
 
-	public class Painter extends Artist {
-		public enum Medium {
-			OIL, WATERCOLOR, ACRYLIC, PENCIL, CHARCOAL
-			}
+    public Painter(String name, int age, String specialty, String medium) {
+        super(name, age, specialty);
+        this.medium = medium;
+    }
 
-		private Medium medium;
+    public String getMedium() {
+        return medium;
+    }
 
-		public Painter(String name, int experience, Medium medium) {
-			super(name, experience);
-			this.medium = medium;
-		}
+    @Override
+    public void displayDetails() {
+        System.out.println("Instance of Painter class");
+        System.out.println("\nPainter's Info:");
+        System.out.println("Artist Name: " + getName());
+        System.out.println("Age: " + getAge());
+        System.out.println("Specialty: " + getSpecialty());
+        System.out.println("Medium: " + medium);
+    }
+}
 
-		public Medium getMedium() {
-			return medium;
-			}
-
-		public void displayDetails() {
-			System.out.println("🎨 Painter: " + getName());
-			System.out.println("Experience: " + getExperience() + " years");
-			System.out.println("Medium: " + medium);
-			}
-		}
