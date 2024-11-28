@@ -1,21 +1,30 @@
-package labact3;
+public class Artist {
+    private String name;
+    private int age;
+    private String specialty;
 
-public abstract class Artist {
-	private String name;
-	private int experience;
+    public Artist(String name, int age, String specialty) {
+        this.name = name;
+        this.age = age;
+        this.specialty = specialty;
+    }
 
-	public Artist(String name, int experience) {
-		this.name = name;
-		this.experience = experience;
-	}
+    public String getName() {
+        return name;
+    }
 
-	public String getName() {
-		return name;
-	}
+    public int getAge() {
+        return age;
+    }
 
-	public int getExperience() {
-		return experience;
-	}
+    public String getSpecialty() {
+        return specialty;
+    }
 
-	public abstract void displayDetails();
-	}
+    public void displayDetails() {
+        System.out.println("Instance of Artist class");
+        System.out.println("Artist Name: " + name);
+        System.out.println("Age: " + age);
+        System.out.println("Specialty: " + specialty);
+    }
+}
