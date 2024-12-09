@@ -12,12 +12,12 @@ public class UserDB {
 
             ResultSet rs = ps.executeQuery();
             if (rs.next()) {
-                return rs.getString("accountNumber"); // Return account number if credentials are valid
+                return rs.getString("accountNumber"); 
             }
         } catch (SQLException e) {
             e.printStackTrace();
         }
-        return null; // Return null if authentication fails
+        return null; 
     }
 
     public static boolean register(String username, String password) {
@@ -27,7 +27,6 @@ public class UserDB {
              PreparedStatement userPs = conn.prepareStatement(insertUserQuery, Statement.RETURN_GENERATED_KEYS);
              PreparedStatement accountPs = conn.prepareStatement(insertAccountQuery)) {
 
-            // Insert user into Users table
             userPs.setString(1, username);
             userPs.setString(2, password);
             int affectedRows = userPs.executeUpdate();
@@ -37,15 +36,13 @@ public class UserDB {
                 return false;
             }
 
-            // Retrieve the new userID
             ResultSet generatedKeys = userPs.getGeneratedKeys();
             if (generatedKeys.next()) {
                 int userId = generatedKeys.getInt(1);
 
-                // Generate random 9-digit account number
+                // Generates random account number
                 String accountNumber = generateAccountNumber();
-
-                // Insert into Accounts table
+                
                 accountPs.setString(1, accountNumber);
                 accountPs.setInt(2, userId);
                 accountPs.executeUpdate();
