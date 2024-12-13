@@ -1,6 +1,6 @@
 ## Digital Banking Portal
 
-![Digital Banking Portal Logo](./logo.png)
+![Digital Banking Portal Logo](https://github.com/PauleenSayat/SayatPauleenJoy-CS2102_OOPactivities/blob/main/Final%20Project/Digital%20Banking%20Portal/Digital%20Banking%20Portal%20logo.webp)
 
 ### For OOP:
 
