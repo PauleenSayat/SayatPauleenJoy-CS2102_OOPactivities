@@ -1,5 +1,7 @@
 ## Digital Banking Portal
 
+![Digital Banking Portal Logo](./logo.png)
+
 ### For OOP:
 
 #### I. Project Overview:
